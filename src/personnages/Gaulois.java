@@ -13,7 +13,7 @@ package personnages;
 		 return nom; 
 	 } 
 	 public void parler(String texte) { 
-		 System.out.println(prendreParole() + "« " + texte + "»"); 
+		 System.out.println(prendreParole() + "« " + texte + " »"); 
 	 } 
 	 private String prendreParole() { 
 		 return "Le gaulois " + nom + " : "; 
@@ -30,7 +30,11 @@ package personnages;
 				 + ", effetPotion=" + effetPotion + "]"; 
 	 } 
 	 public static void main(String[] args) { 
-		 //TODO créer un main permettant de tester la classe Gaulois 
+		 Gaulois asterix = new Gaulois("Astérix", 8);
+		 Romain Minus = new Romain("Minus", 8);
+		 System.out.println(asterix);
+		 asterix.parler("blabla");
+		 asterix.frapper(Minus);
 	 } 
 	 
  }
