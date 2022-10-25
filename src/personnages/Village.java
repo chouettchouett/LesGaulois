@@ -25,32 +25,32 @@ public class Village {
 		nbVillageois +=1;
 	}
 	
-	public Gaulois trouverHabitant(int numero) {
-		return villageois[numero - 1];
+	public Gaulois trouverHabitant(int num) {
+		return villageois[num -1 ];
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans" + getNom() + " du chef" + chef.getNom() + "vivent les légendaires gaulois :");
+		System.out.println("Dans " + getNom() + " du chef" + chef.getNom() + "vivent les légendaires gaulois :");
 		for(int i =0; i <=nbVillageois; i++) {
-			System.out.println(" -" + villageois[i].getNom() + ".");
+			System.out.println(" -" + villageois[i].getNom() + ",");
 		}
 	
 	}
 	
 	public static void main(String[] args) {
 		Village village = new Village("Village des Irréductibles",30);
-		// Gaulois Gaulois = village.trouverHabitant(30);
-		// vide car aucun gaulois dans le village
-		
-		Chef Abraracourcix = new Chef("Abraracourcix",6,1,village);
-		village.setChef(abraracourcix);
-		
-		// Gaulois Gaulois = village.trouverHabitant(1);
 		// System.out.println(village);
-		// On reçoit les informations de Asterix, qui est le premier villageois gaulois
-		// enregistré dans le village
-		Gaulois Obelix = new Gaulois("Obelix", 25);
-		village.ajouterHabitant(Obelix);
+		Gaulois Abraracourcix = new Gaulois("Abraracourcix",6,1,village);
+		village.setChef(Abraracourcix);
+		
+		Gaulois asterix = new Gaulois("Astérix",8);
+		village.ajouterHabitant(asterix);
+		// Gaulois Gaulois = village.trouverHabitant(1);
+		//System.out.println(gaulois);
+		// On reçoit les informations de Astérix, qui le premier villageois gaulois
+		// enregistre dans le village
+		Gaulois Obélix = new Gaulois("Obelix", 25);
+		village.ajouterHabitant(Obélix);
 		village.afficherVillageois();
 	}
 	
