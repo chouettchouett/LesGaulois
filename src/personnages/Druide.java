@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-=======
 package personnages;
+
 import java.util.Random;
 
 public class Druide {
@@ -9,12 +8,12 @@ public class Druide {
 	private int effetPotionMax;
 	private int forcePotion = 1;
 
-	public Druide(String nom, int effetPotionMin, int effetPotionMax) { 
-		this.nom = nom; 
-		this.effetPotionMin = effetPotionMin; 
-		this.effetPotionMax = effetPotionMax; 
-		parler("Bonjour,  je  suis  le  druide  "  +  nom  +  "  et  ma  potion  peut  aller d'une force "
-		+ effetPotionMin + " à " + effetPotionMax + "."); 
+	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
+		this.nom = nom;
+		this.effetPotionMin = effetPotionMin;
+		this.effetPotionMax = effetPotionMax;
+		parler("Bonjour,  je  suis  le  druide  " + nom + "  et  ma  potion  peut  aller d'une force " + effetPotionMin
+				+ " à " + effetPotionMax + ".");
 	}
 
 	public String getNom() {
@@ -25,31 +24,32 @@ public class Druide {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 
-	private String prendreParole() { 
-		return "Le druide " + nom + " : "; 
+	private String prendreParole() {
+		return "Le druide " + nom + " : ";
 	}
-	
+
 	public void preparerPotion() {
-		Random random = new Random(); 
+		Random random = new Random();
 		forcePotion = random.nextInt(effetPotionMax - effetPotionMin + 1);
 		forcePotion += effetPotionMin;
 		if (forcePotion > 7) {
-			parler("J'ai préparer une super potion de force : "+ forcePotion);
+			parler("J'ai préparer une super potion de force : " + forcePotion);
 		} else {
 			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force" + forcePotion);
 		}
 	}
-	
+
 	public void booster(Gaulois gaulois) {
 		String nomGaulois = gaulois.getNom();
-		if("Obélix".equals(nomGaulois));{
+		if ("Obélix".equals(nomGaulois)) {
 			parler("Non, Obélix !... Tu n'auras pas de potion magique ! ");
-		}else{
+		} else {
 			gaulois.boirePotion(forcePotion);
+		}
 	}
-	
+
 	public static void main(String[] args) {
-		Druide panoramix = new Druide("panoramix",5,10);
+		Druide panoramix = new Druide("panoramix", 5, 10);
 		panoramix.preparerPotion();
 	}
 }

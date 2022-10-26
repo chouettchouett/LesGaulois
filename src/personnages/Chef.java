@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package personnages;
 
 
@@ -33,4 +31,3 @@ public class Chef {
 		romain.recevoirCoup(force / 3);
 	}
 }
->>>>>>> e6099c59ef68f09f42008cf6549fdf4c2af78d34

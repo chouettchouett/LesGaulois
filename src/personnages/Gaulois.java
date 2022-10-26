@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package personnages;
 
  public class Gaulois  { 
@@ -32,7 +30,7 @@ package personnages;
 //	 } 
 	 
 	 public void frapper(Romain romain) { 
-		 System.out.println(nom + " envoie un grand coup dans la mâchoire de " 
+		 System.out.println(nom + " envoie un grand coup dans la machoire de " 
 				 + romain.getNom()); 
 		 trophees = romain.recevoirCoup((force / 3)* effetPotion);
 		 for(int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++){
@@ -50,7 +48,7 @@ package personnages;
 		 parler("Merci Druide, je sens que ma force est " + forcePotion + " fois decuplee.");
 	 }
 
-         public void faireUneDonation( Musée musée){
+         public void faireUneDonation( Musee musee){
                  String texte = " ";
                  while(nbTrophee>0){
                      nbTrophees -= 1
@@ -58,11 +56,11 @@ package personnages;
                      texte += "-" + trophee[nbTrophees].getNom() + "\n";
                      trophee[nbTrophees] = null; 
                      }
-                 parler(" Je donne au musée tout mes trophées :" + texte );
+                 parler(" Je donne au musee tout mes trophees :" + texte );
          }
 		 
 	 public static void main(String[] args) { 
-		 Gaulois asterix = new Gaulois("Astérix", 8);
+		 Gaulois asterix = new Gaulois("Asterix", 8);
 		 System.out.println(asterix.nom); //
 		 System.out.println(asterix.prendreParole()); //
 		 Romain Minus = new Romain("Minus", 8);
@@ -73,5 +71,3 @@ package personnages;
 	 } 
 	 
  }
- 
->>>>>>> e6099c59ef68f09f42008cf6549fdf4c2af78d34
