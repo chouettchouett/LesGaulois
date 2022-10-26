@@ -49,6 +49,17 @@ package personnages;
 		 effetPotion += forcePotion;
 		 parler("Merci Druide, je sens que ma force est " + forcePotion + " fois decuplee.");
 	 }
+
+         public void faireUneDonation( Musée musée){
+                 String texte = " ";
+                 while(nbTrophee>0){
+                     nbTrophees -= 1
+                     musee.donnerTrophees(this,trophee[nbTrophees]);
+                     texte += "-" + trophee[nbTrophees].getNom() + "\n";
+                     trophee[nbTrophees] = null; 
+                     }
+                 parler(" Je donne au musée tout mes trophées :" + texte );
+         }
 		 
 	 public static void main(String[] args) { 
 		 Gaulois asterix = new Gaulois("Astérix", 8);
