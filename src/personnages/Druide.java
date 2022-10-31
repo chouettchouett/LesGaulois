@@ -28,15 +28,16 @@ public class Druide {
 		return "Le druide " + nom + " : ";
 	}
 
-	public void preparerPotion() {
-		Random random = new Random();
-		forcePotion = random.nextInt(effetPotionMax - effetPotionMin + 1);
-		forcePotion += effetPotionMin;
-		if (forcePotion > 7) {
-			parler("J'ai préparer une super potion de force : " + forcePotion);
+	public int preparerPotion() {
+		Random rand = new Random();
+		int puissance = rand.nextInt(effetPotionMax-effetPotionMin) + effetPotionMin;
+		if (puissance > 7) {
+			parler("J'ai prepare une super potion de force " + puissance);
 		} else {
-			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force" + forcePotion);
+			parler("Je n'ai pas trouve tous les ingredients, ma potion est seulement de force " + puissance);
 		}
+		forcePotion = puissance;
+		return puissance;
 	}
 
 	public void booster(Gaulois gaulois) {
