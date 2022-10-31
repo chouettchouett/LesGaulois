@@ -25,12 +25,12 @@ public class Village {
 		nbVillageois +=1;
 	}
 	
-	public Gaulois trouverHabitant(int num) {
-		return villageois[num -1 ];
+	public Gaulois trouverHabitant(int index) {
+		return villageois[index];
 	}
 	
 	public void afficherVillageois() {
-		System.out.println("Dans " + getNom() + " du chef" + chef.getNom() + "vivent les légendaires gaulois :");
+		System.out.println("Dans le village du chef " + chef.getNom() + " habitent :");
 		for(int i =0; i <=nbVillageois; i++) {
 			System.out.println(" -" + villageois[i].getNom() + ",");
 		}
@@ -47,7 +47,7 @@ public class Village {
 		village.ajouterHabitant(asterix);
 		// Gaulois Gaulois = village.trouverHabitant(1);
 		//System.out.println(gaulois);
-		// On reçoit les informations de Astérix, qui le premier villageois gaulois
+		// On reçoit les informations de Astérix, qui est le premier villageois gaulois
 		// enregistre dans le village
 		Gaulois Obélix = new Gaulois("Obelix", 25);
 		village.ajouterHabitant(Obélix);
