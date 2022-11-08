@@ -1,6 +1,5 @@
 package personnages;
-
-
+//
 public class Gaulois {
 	private String nom;
 	private int effetPotion = 1;
@@ -37,16 +36,10 @@ public class Gaulois {
 			}
 	} 	
 	
-	public void boirePotion(int forcePotion){
+	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
-		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois decuplee.");
+		parler("Merci Druide, je sens que ma force est " + String.valueOf(forcePotion) + " fois decuplee");
 	}
-	
-	// sa version , mais pk , on verra ^^
-	//public void boirePotion(int forcePotion) {
-	//	effetPotion = forcePotion;
-	//	parler("Merci Druide, je sens que ma force est " + String.valueOf(forcePotion) + " fois decuplee");
-	//}
 
         public void faireUneDonation(Musee musee) {
 		if (nbTrophees > 0) parler("Je donne au musee tous mes trophees :");
