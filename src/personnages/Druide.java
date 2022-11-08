@@ -1,5 +1,5 @@
 package personnages;
-
+//
 import java.util.Random;
 
 public class Druide {
