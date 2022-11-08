@@ -13,7 +13,7 @@ public class Musee {
 	public String extraireInstructionCaml() {
 		String texte = "let musee = [\n";
 		for (int i=0;i<nbTrophee;i++) {
-			texte +="\"";
+			texte +="\"";  // convention pour mettre les " " dans le texte : \"  donc -> " \" " quand on as déjà utilisé "" pour autre chose
 			texte += tableauTrophee[i].donnerNom();
 			texte += "\", \"";
 			texte += tableauTrophee[i].getEquipement().toString();
@@ -25,19 +25,11 @@ public class Musee {
 		return texte;
 	}
 }
+// origine de ma compréhension pour mettre les "" et le , ainsi que le \n 
 
-//public class Musee{
-//  private musee[200];
-//  private int nbTrophee;
-//  
-//  public void donnerTrophee( String gaulois, equipement){
-//    musee += nbTrophee[equipement];
-//  }
-  
-//  public void faireUneDonation(String musee){
-//    gaulois.donnerTrophee;
-//    gaulois.parler("Je donne au musee tous mes trophees : ")
-//    for( int i = 0, i < nbTrophee, i ++){
-//      parler( equipement);
-//    }
-//  }
+//Imagine you are designing a programming language. You decide that Strings are enclosed in quotes ("Apple"). 
+//Then you hit your first snag: how to represent quotation marks since you've already used them ? 
+//Just out of convention you decide to use \" to represent quotation marks. 
+//Then you have a second problem: how to represent \ ? Again, out of convention you decide to use \\ instead. 
+//Thankfully, the process ends there and this is sufficient. 
+//You can also use what is called an escape sequence to represent other characters such as the carriage return (\n).
